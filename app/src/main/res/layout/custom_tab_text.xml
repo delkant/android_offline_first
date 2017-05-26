@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true">
+
+    <com.rodrigodelcanto.mobile.commons.view.TintableImageView
+        android:id="@+id/custom_tab_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        app:tint="@color/white" />
+    <!--TextView
+        android:id="@+id/custom_tab_badge"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="16dp"
+        android:maxLines="1"
+        android:textColor="@color/red"
+        android:textSize="7sp"
+        android:text="211"
+        android:textStyle="bold"
+        android:background="@drawable/badge_white"
+        android:gravity="center"
+        /-->
+
+
+    <TextView
+        android:id="@+id/custom_tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="6dp"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+</RelativeLayout>

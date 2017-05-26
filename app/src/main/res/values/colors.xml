@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#FFC107</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="psts_background_tab_pressed">#1AFFFFFF</color>
+    <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
+
+    <color name="white">#ffffff</color>
+    <color name="red">#ffff0000</color>
+    <color name="black">#000000</color>
+    <color name="white_15_percent">#26ffffff</color>
+    <color name="white_30_percent">#4Dffffff</color>
+
+    <color name="main_color_grey_900">@color/material_grey_900</color>
+
+    <color name="transparent">#00000000</color>
+
+    <!-- PLEASE NOTE: Since adding transparency to already
+    defined colors is not supported through xml, we have
+    to add them manually. This means: we have used purple
+    color scheme, and this is where we use Purple500 color
+    to add transparency. If you were about to change color
+    scheme, also change Purple500 color from here. -->
+    <!-- 10 percent transparent Purple500 -->
+    <color name="main_color_500_10_percent">#1a8f3e97</color>
+    <!-- 20 percent transparent Purple500 -->
+    <color name="main_color_500_20_percent">#338f3e97</color>
+    <!-- 50 percent transparent Purple500 -->
+    <color name="main_color_500_50_percent">#808f3e97</color>
+    <!-- Ex. If you use red color scheme, write down (#ef4437 is Red500 color):
+    <color name="main_color_500_10_percent">#1aef4437</color>
+    <color name="main_color_500_20_percent">#33ef4437</color>
+    <color name="main_color_500_50_percent">#80ef4437</color>
+    -->
+
+</resources>
