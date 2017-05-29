@@ -30,7 +30,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:hint="@string/Birthday"
-        android:inputType="date" />
+        android:inputType="date"
+        />
 
     <EditText
         android:id="@+id/zipCode"
@@ -51,8 +52,10 @@
             android:id="@+id/area_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="bottom"
             app:countryPreference="US,PY"
-            app:defaultNameCode="US" />
+            app:defaultNameCode="US"
+            app:textSize="16dp"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -66,8 +69,7 @@
                 android:inputType="number"
                 android:maxLength="20"
                 android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
+                android:textSize="16dp"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -78,18 +80,5 @@
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:choiceMode="singleChoice" />
-    <!--
-     @SerializedName(F_NATIONALITY)
-        String nationalityCode;
-        @SerializedName(F_NATIONAL_ID)
-        private String nationalId;
-        @SerializedName(F_ADDRESS)
-        private AddressModel address;
-        @SerializedName(F_NOTE)
-        private String note;
-        @SerializedName(F_CELLPHONE)
-        private String cellphone;
 
-
-    -->
 </LinearLayout>

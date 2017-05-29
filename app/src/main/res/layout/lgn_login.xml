@@ -76,6 +76,7 @@
                 android:textColor="@color/primary"
                 android:layout_marginTop="@dimen/md_content_padding_top"
                 android:textSize="@dimen/md_title_textsize"
+                android:visibility="gone"
                 />
 
             <com.rodrigodelcanto.mobile.commons.view.ExpandableHeightListView
@@ -84,7 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:fadingEdge="none"
-                android:scrollbars="none" />
+                android:scrollbars="none"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/login_button"

@@ -84,8 +84,8 @@ public class LoginActivity extends AppCompatActivity {
 
   private List<EntryData> getHosts() {
     List<EntryData> list = new LinkedList<>();
-    list.add(new EntryData("192.168.1.100", "AWS (Self Hosted)", false));
-    list.add(new EntryData("192.168.0.14", "Cloudant Couch AS", false));
+    list.add(new EntryData("x.x.x.x", "AWS (Self Hosted)", false));
+    list.add(new EntryData("x.x.x.x", "Cloudant Couch AS", false));
     return list;
   }
 
@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
       String username = usernameView.getText().toString();
       String password = passwordView.getText().toString();
 
-      Application.startSession(Constants.DEMO_HOST, Constants.DEMO_TOKEN, Constants.DEMO_PASS);
+      Application.startSession(Constants.DEMO_HOST, username, password);
       Activities.replace(LoginActivity.this, PeopleMainActivity.class);
     } catch (DemoException ex) {
       Views.setError(ex.getView(), ex.getMessage());

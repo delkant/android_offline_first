@@ -233,7 +233,7 @@ public class PersistenceManager implements Replication.ChangeListener {
       Log.d(TAG, "DB_Dir(" + dbName + ") :" + context.getFilesDir());
       if (localDB == null) {
 //                try {
-//                   TODO: create default values?? ZipUtils.unzip(getAssets().open("catalog.zip"), manager.getContext().getFilesDir());
+//                   TODO: save default values?? ZipUtils.unzip(getAssets().open("catalog.zip"), manager.getContext().getFilesDir());
 //                } catch (IOException e) {
 //                    e.printStackTrace();
 //                }

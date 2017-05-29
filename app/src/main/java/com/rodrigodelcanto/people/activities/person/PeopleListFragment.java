@@ -3,6 +3,7 @@ package com.rodrigodelcanto.people.activities.person;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -57,7 +58,7 @@ public class PeopleListFragment extends Fragment {
             tabPageRecylerView.setLayoutManager(gridLayoutManager);
         }
 
-        mAdapter = new PeopleAdapter();
+        mAdapter = new PeopleAdapter((AppCompatActivity) getActivity());
         QPerson.findAll(true, getActivity(), mAdapter);
         tabPageRecylerView.setAdapter(mAdapter);
 

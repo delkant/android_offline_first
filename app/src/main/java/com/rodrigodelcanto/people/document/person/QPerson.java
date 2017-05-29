@@ -14,8 +14,6 @@ import com.rodrigodelcanto.people.activities.person.PeopleAdapter;
 import java.util.List;
 import java.util.Map;
 
-import static android.R.attr.tag;
-
 /**
  * Created by delkant on 4/10/17.
  */
@@ -27,38 +25,15 @@ public class QPerson extends Q {
         return Person.wrap(document(id).getProperties());
     }
 
-//    private static Mapper mapperByTag(final String tag) {
-//
-//        return new Mapper() {
-//            public void map(Map<String, Object> document, Emitter emitter) {
-//                if (Person.SCHEMA.equals(document.get("schema"))) {
-//                    Person person = Person.wrap(document);
-//                    if (tag.equals(person.getTag())) {
-//                        emitter.emit(person.getId(), person.getInserted().toTimeString());
-//                    }
-//                }
-//            }
-//        };
-//    }
-
-//    public static View getViewByTag(String tag) {
-//        String v = "1.00";
-//        View view = getView(Person.SCHEMA + "_v_" + v);
-//        if (view.getMap() == null) {
-//            view.setMap(mapperByTag(tag), v);
-//        }
-//        return view;
-//    }
-
     public static View getViewAll() {
         String v = "1.00";
-        View view = Q.getView(Person.SCHEMA + "_tag_" + tag + "_v_" + v);
+        View view = Q.getView(Person.SCHEMA + "_all" + "_v_" + v);
         if (view.getMap() == null) {
             Mapper mapper = new Mapper() {
                 public void map(Map<String, Object> document, Emitter emitter) {
                     if (Person.SCHEMA.equals(document.get("schema"))) {
                         Person person = Person.wrap(document);
-                        emitter.emit(person.getId(), person.getInserted().toTimeString());
+                        emitter.emit(person.getId(), person.getModified().toTimeString());
                     }
                 }
             };
@@ -67,15 +42,6 @@ public class QPerson extends Q {
         return view;
     }
 
-//    public static List<Person> findByTag(final String tag) {
-//        return findByTag(tag, true);
-//    }
-
-//    public static List<Person> findAll(final String tag, boolean descending) {
-//        Query query = getViewByTag(tag).createQuery();
-//        query.setDescending(descending);
-//        return list(query, Person.class);
-//    }
 
     public List<Person> findPeople() {
         Query query = getViewAll().createQuery();

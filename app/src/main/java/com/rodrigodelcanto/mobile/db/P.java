@@ -1,4 +1,4 @@
-package com.rodrigodelcanto.people.document.person;
+package com.rodrigodelcanto.mobile.db;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -23,22 +23,22 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by delkant on 5/26/17.
+ * Created by delkant on 5/28/17.
+ *
+ * Persistence Actions
  */
 
-public class CUDPerson {
-    private static final String TAG = "CUDPerson";
+public class P {
+    private static final String TAG = "Persistence";
     private static final int THUMBNAIL_SIZE = 150;
 
-    public static Person create(Person person) {
-        Document doc = create(person.exportMap());
-        return Person.wrap(doc);
-    }
-        public static Document create(Map<String, Object> properties) {
-        return create(properties, false);
+
+
+    public static Document save(Map<String, Object> properties) {
+        return save(properties, true);
     }
 
-    public static Document create(Map<String, Object> properties, Boolean ignoreConflicts) {
+    public static Document save(Map<String, Object> properties, Boolean ignoreConflicts) {
         Document document = Application.getPersistence().getDatabase().getDocument((String) properties.get("id"));
         try {
             document.putProperties(properties);
@@ -83,7 +83,6 @@ public class CUDPerson {
         return document;
     }
 
-
     public static void delete(Document document) {
         try {
             document.delete();
@@ -96,7 +95,7 @@ public class CUDPerson {
         if (doc == null || image == null) return;
         Map img = new HashMap<String, Object>();
         img.put("schema", "demo:image");
-        Document imageDoc = create(img);
+        Document imageDoc = save(img);
 
         UnsavedRevision revision = imageDoc.createRevision();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -202,7 +201,7 @@ public class CUDPerson {
     }
 
     /**
-     * Read the image from the stream and create a bitmap scaled to the desired
+     * Read the image from the stream and save a bitmap scaled to the desired
      * size.  Resulting bitmap will be at least as large as the
      * desired minimum specified dimensions and will keep the image proportions
      * correct during scaling.

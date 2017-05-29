@@ -10,6 +10,7 @@
         <item name="android:colorBackground">@android:color/white</item>
         <item name="android:textColorSecondary">@android:color/secondary_text_dark_nodisable</item>
         <item name="android:textColorSecondaryInverse">?android:attr/textColorSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
     </style>
 
     <!--<style name="AppTheme.Button" parent="AppTheme">-->

@@ -22,6 +22,8 @@ import java.util.List;
  */
 
 public class Q {
+  private static final String TAG = "Query";
+
   public final static String VIEW = "VIEW_";
 
   protected static Database database() {
@@ -56,7 +58,7 @@ public class Q {
         o.load(doc.getProperties());
         result.add(o);
       }
-    Log.d(Application.TAG, tClass +" found " + result.size());
+    Log.d(TAG, tClass +" found " + result.size());
 
    return result;
   }

@@ -9,12 +9,18 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDialogFragment;
 import android.widget.DatePicker;
+import android.widget.EditText;
 
 import java.util.Calendar;
 
 
 public class DatePickerFragment extends AppCompatDialogFragment
         implements DatePickerDialog.OnDateSetListener {
+    EditText date;
+
+    public void setField(EditText date) {
+        this.date = date;
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -30,5 +36,9 @@ public class DatePickerFragment extends AppCompatDialogFragment
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
+        if (date != null) {
+            date.setText((month < 9 ? "0" + month : month) + "/" +
+                    (day < 9 ? "0" + day : day) + "/" + year);
+        }
     }
 }

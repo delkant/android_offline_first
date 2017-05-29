@@ -13,6 +13,8 @@ import com.rodrigodelcanto.people.Constants;
 
 import java.util.Map;
 
+import static com.rodrigodelcanto.people.R.id.birthday;
+
 /*
 * Requirements:
 * Fields: firstname, lastname, phone number, date of birth and zip-code
@@ -68,6 +70,14 @@ public class Person extends MapBasedEntity {
         return getFirstName() + " " + getLastName();
     }
 
+    public String getPhoneCode() {
+        return (String) map.get("phoneCode");
+    }
+
+    public void setPhoneCode(String codeNumber) {
+        map.put("phoneCode", codeNumber);
+    }
+
     public String getPhoneNumber() {
         return (String) map.get("phoneNumber");
     }
@@ -81,8 +91,17 @@ public class Person extends MapBasedEntity {
     }
 
     public void setZipCode(String zipCode) {
-        map.put("zipCode", zipCode);
+        map.put("birthday", birthday);
     }
+
+    public void setBirthday(String birthday) {
+        map.put("birthday", birthday);
+    }
+
+    public String getBirthday() {
+        return (String) map.get("birthday");
+    }
+
 
     public LogStamp getInserted() {
         return LogStamp.wrap(map.get("inserted"));
@@ -101,7 +120,7 @@ public class Person extends MapBasedEntity {
     }
 
     public EntityRef toEntityRef() {
-        return EntityRef.newObject(getId(), getFullName(), getPhoneNumber());
+        return EntityRef.newObject(getId(), getFullName(), getPhoneCode() + getPhoneNumber());
     }
 
     public static Person newEntity() {

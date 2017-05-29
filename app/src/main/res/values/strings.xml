@@ -40,5 +40,7 @@
     <string name="phone">Phone Number</string>
     <string name="zip_code">Zip Code</string>
     <string name="Birthday">Birthday</string>
+    <string name="menu_item_delete">Delete</string>
+    <string name="too_short">too short!</string>
 
 </resources>
