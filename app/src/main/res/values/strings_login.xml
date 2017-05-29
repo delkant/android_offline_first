@@ -2,13 +2,13 @@
     <string name="lgn_mod_name">login</string>
 
     <!-- login_activity_login -->
-    <string name="lgn_username">Usuario</string>
-    <string name="lgn_password">Contraseña</string>
-    <string name="lgn_host">Ubicación</string>
-    <string name="lgn_sign_in">Ingresar</string>
-    <string name="lgn_sign_in_short">ir</string>
+    <string name="lgn_username">Username</string>
+    <string name="lgn_password">Password</string>
+    <string name="lgn_host">Host</string>
+    <string name="lgn_sign_in">Sign In</string>
+    <string name="lgn_sign_in_short">go</string>
 
     <!-- login errors -->
-    <string name="lgn_err_check_password">Compruebe su contraseña</string>
-    <string name="lgn_err_access_denied">Ingreso denegado</string>
+    <string name="lgn_err_check_password">Please check your password</string>
+    <string name="lgn_err_access_denied">Access denied</string>
 </resources>

@@ -17,15 +17,15 @@
         completions."
     </string>
 
-    <string name="Name">Nombre</string>
-    <string name="Inbox">General</string>
+    <string name="Name">Name</string>
+    <string name="Inbox">Inbox</string>
 
 
     <string name="dialog_ok_button">ok</string>
     <string name="dialog_cancel_button">Cancel</string>
     <!-- buttons -->
-    <string name="add_item_button">Agregar</string>
-    <string name="del_item_button">Quitar</string>
+    <string name="add_item_button">Add</string>
+    <string name="del_item_button">Delete</string>
 
     <!-- srv -->
     <string name="srv_response_ok">Sucess</string>
